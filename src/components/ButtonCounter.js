@@ -1,18 +1,18 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import {
-  incrementAction,
-  decrementAction,
-  resetAction,
-} from "../redux/actions/counterAction";
+// import { useDispatch } from "react-redux";
+// import {
+//   incrementAction,
+//   decrementAction,
+//   resetAction,
+// } from "../redux/actions/counterAction";
 
-const ButtonCounter = () => {
-  const dispatch = useDispatch();
+const ButtonCounter = (props) => {
+  // const dispatch = useDispatch();
   return (
     <div>
-      <button onClick={() => dispatch(incrementAction())}>Increment</button>
-      <button onClick={() => dispatch(resetAction())}>Reset</button>
-      <button onClick={() => dispatch(decrementAction())}>Decrement</button>
+      <button onClick={() => props.incrementAction()}>Increment</button>
+      <button onClick={() => props.resetAction()}>Reset</button>
+      <button onClick={() => props.decrementAction()}>Decrement</button>
     </div>
   );
 };
